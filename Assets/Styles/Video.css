@@ -1,0 +1,186 @@
+.CourseOp h2 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #21242c;
+    font-size: 30px;
+    font-weight: 1000;
+    font-family: sans-serif;
+}
+
+
+.Course1 {
+    margin-top: 1em;
+}
+
+.Video-text {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+#Reco {
+    font-size: 25px;
+    color: #9e2525;
+    font-weight: 1000;
+    margin-left: 2em;
+}
+
+#Vid {
+
+    font-size: 25px;
+    color: #333;
+    font-weight: 1000;
+    margin-left: 0.3em;
+
+}
+
+.AnotherCourses {
+    margin-top: 3em;
+}
+
+.video-box {
+    width: 400px;
+    border: 1px solid lightblack;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.video-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.video-box a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.video-box img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.titleVideo {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-right: 1em;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(33, 69, 168);
+    font-size: 50px;
+    transition: transform 0.3s ease;
+}
+
+.play-icon:hover {
+    color: #ff0000;
+}
+
+.play-icon:active {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.info {
+    margin-top: 15px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    color: #666;
+    text-align: left;
+}
+
+.info i {
+    margin-right: 5px;
+    color: #333;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+.Course1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.icon-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    outline: none;
+}
+
+
+.icon-btn i {
+    font-size: 36px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.icon-btn:hover i {
+    color: #28a745;
+    transform: scale(1.2);
+}
+
+
+.icon-btn:active i {
+    transform: scale(0.9);
+}
+
+.navTop {
+    width: 82em;
+}
+.NoteText{
+    margin-top: 4em;
+    padding: 18px;
+
+
+}
+#NoT{
+    font-size: 20px;
+    color: #333;
+    
+}
+ @media print {
+ 
+            html,
+            body {
+ 
+                /* Hide the whole page */
+                display: none;
+            }
+        }

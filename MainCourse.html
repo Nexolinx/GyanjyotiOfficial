@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Assets/Styles/Course.css">
+    <link rel="stylesheet" href="/Assets/Styles/Nav.css">
+    <title>GyanJyoti Mathmatics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section id="sidebar">
+	
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
+			<li class="divider" data-text="main">Services</li>
+			<li><a href="/VideoCourse.html" target="_blank"><i class='bx bxs-inbox icon'></i> Courses</a></li>
+			<li><a href="/MainCourse.html" target="_blank"><i class='bx bxs-book icon'></i> Books</a></li>
+
+			<li><a href="/Education Game/Game.html" target="_blank"><i class='bx bx-game icon'></i> Educational
+					Game</a></li>
+			<li><a href="/Solar.html" target="_blank"><i class='bx bx-atom icon'></i>Science Hub</a></li>
+			<li><a href="/Quiz/Quiz.Html" target="_blank"><i class='bx bx-brain icon'></i>Quiz</a></li>
+
+			<li><a href="https://sajiloaiservice.vercel.app/"><i class='bx bx-chat icon'></i>Sajilo Ai</a></li>
+		</ul>
+	</section>
+	
+	<section id="content">
+		<div class="AllTopNav">
+			<nav class="top-nav">
+				<a href="index.html" class="brand">
+					<img src="./Assets/IMG/gyan.png" alt="Gyan-Jyoti Official Logo" id="Gyan-Logo"><h1>	GyanJyoti</h1>																								
+				</a>
+			  <ul>
+				<li><i class="bx bx-map"></i> Location: <span class="answer">Butwal-10,Rupandehi</span></li>
+				<li><i class="bx bx-envelope"></i> Gmail: <span class="answer email">gyan@gmail.com</span></li>
+				<li><i class="bx bx-book"></i> Total Books: <span class="answer books">31</span></li>
+			  </ul>
+			</nav>
+			<nav>
+			  <i class="bx bx-menu toggle-sidebar"></i>
+			  <form action="#">
+				<div class="form-group"></div>
+			  </form>
+		
+			  <span class="divider"></span>
+			  <div class="social-links">
+				<a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+				<a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+				<a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+				<a href="#" class="social-icon"   
+		 id="chatbot-icon"><i class="bx bx-chat"></i></a>
+			  </div>
+			</nav>
+		
+			<div id="chatbot-popup" class="chatbot-popup" style="display: none;">
+			  <div class="chatbot-header">
+				<h4>Chat with us!</h4>
+				<span id="close-chatbot" class="close-btn">&times;</span>
+			  </div>
+			  <div class="chatbot-body">
+				<p>How can we assist you today?</p>
+				<textarea placeholder="Type your message..."></textarea>
+				<button id="send-message">Send</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
+
+            <div class="SearchItem">
+                <form action="#" class="Search-Section">
+                    <i class="fas fa-search" id="searchIcon"></i>
+                    <input type="search" name="Search" id="Search" placeholder="Search Courses ....." autocomplete="off"
+                        oninput="searchCourses()" onkeyup="toggleClearButton()">
+                    <i class="fas fa-times" id="clearIcon" onclick="clearSearch()"></i>
+                </form>
+            </div>
+            
+            <div class="allitem">
+                
+                <div class="CourseCheckBox">
+                    <div class="CheckItems">
+                       
+                
+                        <form action="#" class="FormAll">
+                            <div class="box1">
+                                <div class="Level">
+                                    <h2>Secondary Level Education</h2>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Maths" id="check1"
+                                        data-courses="course1,course2,course3,course4,course5,course6"
+                                        onclick="toggleCheckbox(this)">
+                                    <label for="check1" class="TextSub">Math(5)</label>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Science" id="check2"
+                                        data-courses="course6,course7,course8,course9,course10,course11"
+                                        onclick="toggleCheckbox(this)">
+                                    <label for="check2" class="TextSub">Science(3) </label>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Arts" id="check3"
+                                        data-courses="course12,course13,course14" onclick="toggleCheckbox(this)">
+                                    <label for="check3" class="TextSub">English (3)</label>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Arts" id="check3"
+                                        data-courses="course15,course16,course17" onclick="toggleCheckbox(this)">
+                                    <label for="check3" class="TextSub">Nepali (3)</label>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Arts" id="check3" data-courses="course18,course19"
+                                        onclick="toggleCheckbox(this)">
+                                    <label for="check3" class="TextSub">Optional Math (3)</label>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Arts" id="check3"
+                                        data-courses="course20,course21,course22" onclick="toggleCheckbox(this)">
+                                    <label for="check3" class="TextSub">Social (3)</label>
+                                </div>
+
+                            </div>
+                            <div class="box1">
+                                <div class="Level">
+                                    <h2>Select a Course Category</h2>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Technical" id="check1"
+                                        data-courses="course23,course24,course25,course26,course27,course28,course29,course30"
+                                        onclick="toggleCheckbox(this)">
+                                    <label for="check1" class="TextSub">Technical Subjects</label>
+                                </div>
+                                <div class="BoxCheck">
+                                    <input type="checkbox" name="Arts" id="check3"
+                                        data-courses="course1,course2,course3,course4,course5,course6,course7,course8,course9,course10,course11,course12,course13,course14,course15,course16,course17,course18,course19,course20,course21,course22"
+                                        onclick="toggleCheckbox(this)">
+                                    <label for="check3" class="TextSub">General Subject</label>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <span id="Tot">Total Book : <span id="Num">40</span></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="courses" id="coursesContainer">
+
+                       
+                       
+                        <div id="course3" class="courseBox" data-title="Class 8 Math CDC English Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book22.png" alt="Class 8 Math CDC English Medium">
+                                </div>
+                                <h4>Class 8 Math CDC English Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1DSFEey0HxNKyuGBvhrV-i4PPoXgixDne/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="course4" class="courseBox" data-title="Class 9 Math CDC English Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book23.png" alt="Class 9 Math CDC English Medium">
+                                </div>
+                                <h4>Class 9 Math CDC Nepali Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                   <a href="https://drive.google.com/file/d/1S6NPMPwxg2v3okHTqRObYjzP_VVMQHxj/view?usp=sharing" target="_blank"><button>Explore</button></a> 
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="course5" class="courseBox" data-title="Class 10 Math CDC English Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book8.png" alt="Class 10 Math CDC English Medium">
+                                </div>
+                                <h4>Class 10 Math CDC English Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1036crLdWo5cO5lW22-5fwUbsJyyuQG_2/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course6" class="courseBox" data-title=" Class 8 Science CDC Nepali Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book5.png" alt=" Class 8 Science CDC Nepali Medium">
+                                </div>
+                                <h4> Class 8 Science CDC Nepali Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1fTZKSbTpl6Ea_AuhAuQvICVVRJd5RIUQ/view?usp=sharing"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course7" class="courseBox" data-title=" Class 9 Science CDC Nepali Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book10.png" alt=" Class 9 Science CDC Nepali Medium">
+                                </div>
+                                <h4> Class 9 Science CDC Nepali Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1aCK7GzJRtRllricElGWwQUtdL2Kl9jDT/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course8" class="courseBox" data-title="Class 10 Science CDC Nepali Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book9.png" alt="Class 10 Science CDC Nepali Medium">
+                                </div>
+                                <h4> Class 10 Science CDC Nepali Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1AH-GofbbnO4U9dQTJk962nY5onUZD2G7/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course9" class="courseBox" data-title="Class 8 Science CDC English Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book5.png" alt="Class 8 Science CDC English Medium">
+                                </div>
+                                <h4> Class 8 Science CDC English Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/14AHdAocs3E15zuhi2YuDkPaoRgseb5MH/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course10" class="courseBox" data-title="Class 9 Science CDC English Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book10.png" alt="Class 9 Science CDC English Medium">
+                                </div>
+                                <h4> Class 9 Science CDC English Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/163QGWV5-CFNXDp3hceee8EdyCaixBo3r/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course11" class="courseBox" data-title="Class 10 Science CDC English Medium">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="  /Book/Book-Img/Book9.png" alt="Class 10 Science CDC English Medium">
+                                </div>
+                                <h4> Class 10 Science CDC English Medium</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 3 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1eqoYzdrF8n_p-OaM8jJ1BdxxVob0nEJk/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course12" class="courseBox" data-title="Class 10 English Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book3.png" alt="Class 10 English Book">
+                                </div>
+                                <h4>Class 8 English Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1kuSzbVwDyhacZHbIesL0uB7H6ym2Qx2O/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course13" class="courseBox" data-title="Class 9 English Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="Book/Book-Img/Book4.png" alt="Class 9 English Book">
+                                </div>
+                                <h4>Class 9 English Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class    ="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1d0m_jlgR_aiNx-l1GaU2WnL5LFeHZnYu/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course14" class="courseBox" data-title="Class 10 English Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book5.png" alt="Class 10 English Book">
+                                </div>
+                                <h4>Class 10 English Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/11T1JE7oN0FMa8yMDDrX0yxXu5cwqtlYo/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course15" class="courseBox" data-title="Class 8 Nepali Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book29.png" alt="Class 8 Nepali Book">
+                                </div>
+                                <h4>Class 8 Nepali Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1wu2YjK1yfk5B0ipOLr7K-TsJ5AWEI64J/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course16" class="courseBox" data-title="Class 9 Nepali Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book30.png" alt="Class 9 Nepali Book">
+                                </div>
+                                <h4>Class 9 Nepali Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                   <a href=" https://drive.google.com/file/d/1d0r54KV8JEan0MsT77ngCBSvlbDlgZC0/view?usp=sharing" target="_blank"><button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course17" class="courseBox" data-title="Class 10 Nepali Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book12.png" alt="Class 10 Nepali Book">
+                                </div>
+                                <h4>Class 10 Nepali Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/10C-HCsKJeB2QpQO4eIZNs_uuHknZaSN2/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course18" class="courseBox"
+                            data-titles="Class 9 Optional Math Book,omath,class 9 omath">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book24.png" alt="Class 9 Optional Math Book">
+                                </div>
+                                <h4>Class 9 Optional Math Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/11glOftfPA8s330sBQg4N86WQ-5izhrCM/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course19" class="courseBox"
+                            data-titles="Class 10 Optional Math Book,omath,class10 omath">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book25.png" alt="Class 10 Optional Math Book">
+                                </div>
+                                <h4>Class 10 Optional Math Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1keh-D6CPARRcHWm7CQtuZ7VxaYfA1lkr/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course20" class="courseBox" data-title="Class 8 Social Studies Nepali medium Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book28.png" alt="Class 8 Social Studies Nepali medium Book">
+                                </div>
+                                <h4>Class 8 Social Studies Nepali medium Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1UmAoKhKgFPlPVzO8vfEIBFAn-qvpBlVG/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course21" class="courseBox" data-title="Class 9 Social Studies Nepali medium Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book27.png" alt="Class 9 Social Studies Nepali medium Book">
+                                </div>
+                                <h4>Class 9 Social Studies Nepali medium Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+    <a href="https://drive.google.com/file/d/1ul6IbZjtyvKZspXMaOdeLpXi_Ujka-Ib/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course22" class="courseBox" data-title="Class 10 Social Studies Nepali medium Book">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book26.png"
+                                        alt="Class 10 Social Studies Nepali medium Book">
+                                </div>
+                                <h4>Class 10 Social Studies Nepali medium Book</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1mIOGJIr6DWsokgM5DASCrbDIOtcyt1-X/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course23" class="courseBox" data-title="Data Structure And OOPS using C++ Class 10">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book16.png"
+                                        alt="Data Structure And OOPS using C++ Class 10">
+                                </div>
+                                <h4>Data Structure And OOPS using C++ Class 10</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1x0H-Fa9AcO8b8gLYS333qIMeSTjdIQyT/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course24" class="courseBox" data-title="Digital Designing And Microprocessor class 10">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book18.png"
+                                        alt="Digital Designing And Microprocessor Class 10">
+                                </div>
+                                <h4>Digital Designing And Microprocessor Class 9</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1_eA-zPEfvV4mAp5a3rtgqoN5yHQv28Ty/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course25" class="courseBox" data-title="Database Management System (DBMS) class 10">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book15.png"
+                                        alt="Database Management System (DBMS) class 10">
+                                </div>
+                                <h4>Database Management System (DBMS) class 10</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1Rc8d4yGYJnDpIELoynJeokxUs83HCNZw/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course26" class="courseBox" data-title="Computer Hardware & Maintainance Class 10">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book17.png" alt="Computer Hardware & Maintainance Class 10">
+                                </div>
+                                <h4>Computer Hardware & Maintainance Class 10</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/14rr-KvqzZQJxvyOLe01TJyXxpfFXhNVz/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="course27" class="courseBox" data-title="Website Designing Class 90">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book31.png" alt="Website Designing Class 9">
+                                </div>
+                                <h4>Website Designing Class 9</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1VxEEufVkdB93r2tL-Kwt3KWvMCOXH5Ab/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course28" class="courseBox" data-title="Fundamental Of Computer System Class 9">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book33.png" alt="Fundamental Of Computer System Class 9">
+                                </div>
+                                <h4>Fundamental Of Computer System Class 9</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1N_6WvrYhah3ySZFvdNYT8pAVu6rlhOys/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course29" class="courseBox" data-title="Fundamental of Electro System Class 9">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book32.png" alt="Fundamental of Electro System Class 9">
+                                </div>
+                                <h4>Fundamental of Digital System Class 9 </h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1_eA-zPEfvV4mAp5a3rtgqoN5yHQv28Ty/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="course30" class="courseBox" data-titles="C Programming Class 9,CProgramming,C">
+                            <div class="box">
+                                <div class="ronaldo">
+                                    <img src="/Book/Book-Img/Book34.png" alt="C Programming Class 9">
+                                </div>
+                                <h4>C Programming Class 9</h4>
+                                <div class="info">
+                                    <div class="pdf-count"><i class="fa-solid fa-file-pdf"></i> 1 PDFs</div>
+                                    <div class="upload-time"><i class="fa-regular fa-clock"></i> 3 days ago</div>
+                                </div>
+                                <div class="explore">
+                                    <div class="icons">
+                                        <i class="fa-regular fa-bookmark favorite-icon"
+                                            onclick="toggleFavorite(this)"></i>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/18eGsTAmowMwwIJnX8LtI6k4EgmJkjZhE/view?usp=sharing" target="_blank"> <button>Explore</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="noData" style=" padding: 52px;">No data found.
+                </div>
+               
+      
+                 <div id="noData" style=" padding: 52px;">No data found.
+                </div>
+                <div id="popup" class="popup"></div>
+        </main>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/Assets/JS/script.js"></script>
+    <script src="/Assets/JS/toggle.js"></script>
+    <script src="/Assets/JS/Books.js"></script>
+    <script src="/Assets/JS/Books.js"></script>
+    <script>
+        function toggleCheckbox(clicked) {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const courseBoxes = document.querySelectorAll('.courseBox');
+            let isChecked = false;
+
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox !== clicked) {
+                    checkbox.checked = false;
+                } else {
+                    isChecked = checkbox.checked;
+                }
+            });
+
+
+            courseBoxes.forEach(box => {
+                box.style.display = 'none';
+            });
+
+
+            if (isChecked) {
+                const selectedCourses = clicked.getAttribute('data-courses').split(',');
+                selectedCourses.forEach(course => {
+                    const selectedBox = document.getElementById(course.trim());
+                    if (selectedBox) {
+                        selectedBox.style.display = 'block';
+                    }
+                });
+            } else {
+
+                courseBoxes.forEach(box => {
+                    box.style.display = 'block';
+                });
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        let autocomplete = document.querySelector('input[name="search"]').setAttribute('autocomplete', 'off');
+
+    </script>
+
+    <script>
+        function searchCourses() {
+            const searchInput = document.getElementById('Search').value.toLowerCase();
+            const courses = document.querySelectorAll('.courseBox');
+            const noDataMessage = document.getElementById('noData');
+            let hasResults = false;
+
+
+            noDataMessage.style.display = 'none';
+
+
+            courses.forEach(course => {
+
+                const title = course.getAttribute('data-title')
+                    ? course.getAttribute('data-title').toLowerCase()
+                    : course.textContent.toLowerCase();
+
+
+                if (title.includes(searchInput) || (searchInput.length === 1 && title.startsWith(searchInput))) {
+                    course.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    course.style.display = 'none';
+                }
+            });
+
+
+            if (!hasResults) {
+                noDataMessage.style.display = 'block';
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

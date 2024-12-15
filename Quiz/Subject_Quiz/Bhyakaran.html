@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Assets/Styles/Nav.css">
+    <link rel="stylesheet" href="/Assets/Styles/SubQuiz.css">
+    <title>Gyan-Jyoti Leading Educational Sites</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <section id="sidebar">
+	
+      <ul class="side-menu">
+        <li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
+        <li class="divider" data-text="main">Services</li>
+        <li><a href="/VideoCourse.html" target="_blank"><i class='bx bxs-inbox icon'></i> Courses</a></li>
+        <li><a href="/MainCourse.html" target="_blank"><i class='bx bxs-book icon'></i> Books</a></li>
+  
+        <li><a href="/Education Game/Game.html" target="_blank"><i class='bx bx-game icon'></i> Educational
+            Game</a></li>
+        <li><a href="/Solar.html" target="_blank"><i class='bx bx-atom icon'></i>Science Hub</a></li>
+        <li><a href="/Quiz/Quiz.Html" target="_blank"><i class='bx bx-brain icon'></i>Quiz</a></li>
+  
+        <li><a href="https://sajiloaiservice.vercel.app/"><i class='bx bx-chat icon'></i>Sajilo Ai</a></li>
+      </ul>
+	</section>
+	
+	<section id="content">
+		<div class="AllTopNav">
+			<nav class="top-nav">
+				<a href="index.html" class="brand">
+					<img src="/Assets/IMG/gyan.png" alt="Gyan-Jyoti Official Logo" id="Gyan-Logo"><h1>	GyanJyoti</h1>																								
+				</a>
+			  <ul>
+				<li><i class="bx bx-map"></i> Location: <span class="answer">Butwal-10,Rupandehi</span></li>
+				<li><i class="bx bx-envelope"></i> Gmail: <span class="answer email">gyan@gmail.com</span></li>
+				<li><i class="bx bx-book"></i> Total Books: <span class="answer books">31</span></li>
+			  </ul>
+			</nav>
+			<nav>
+			  <i class="bx bx-menu toggle-sidebar"></i>
+			  <form action="#">
+				<div class="form-group"></div>
+			  </form>
+		
+			  <span class="divider"></span>
+			  <div class="social-links">
+				<a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+				<a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+				<a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+				<a href="#" class="social-icon"   
+		 id="chatbot-icon"><i class="bx bx-chat"></i></a>
+			  </div>
+			</nav>
+		
+			<div id="chatbot-popup" class="chatbot-popup" style="display: none;">
+			  <div class="chatbot-header">
+				<h4>Chat with us!</h4>
+				<span id="close-chatbot" class="close-btn">&times;</span>
+			  </div>
+			  <div class="chatbot-body">
+				<p>How can we assist you today?</p>
+				<textarea placeholder="Type your message..."></textarea>
+				<button id="send-message">Send</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+        <main>
+            <h1 class="title">Dashboard</h1>
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li class="divider">/</li>
+                <li><a href="#" class="active">Dashboard</a></li>
+            </ul>
+
+          
+
+            <div class="quiz-info" style="display: none;">
+                <div class="QuizItem">
+                      <div class="time-display">
+                        <i class="fas fa-clock"></i> <span id="time">300</span> 
+                    </div>
+                    <div class="remaining-questions-count">
+                        <i class="fas fa-question-circle"></i> <span id="remaining-questions-count">6</span>
+                    </div>
+                </div>
+                  
+                </div>
+            <div class="quiz-container">
+                <button id="start-quiz-btn" class="start-quiz-btn" onclick="startQuiz()">Start Quiz</button>
+                <div class="quiz-info" style="display: none;">
+                    <div class="time-display">
+                        <i class="fas fa-clock"></i> <span id="time">300</span> 
+                    </div>
+                    <div class="remaining-questions-count">
+                        <i class="fas fa-question-circle"></i> <span id="remaining-questions-count">6</span>
+                    </div>
+                </div>
+                <div id="question-container" class="question-container" style="display: none;"></div>
+                <div id="result" class="result-display" style="display: none;">
+                    <h2>Quiz Over!</h2>
+                    <button onclick="restartQuiz()" id="start-quiz-btn" class="start-quiz-btn"  >Restart Quiz</button>
+                </div>
+            
+                <div id="popup" class="popup" style="display: none;">
+                    <div class="popup-content">
+                        <div id="popup-message">Popup Message</div>
+                        <button class="close-popup-btn" onclick="closePopup()">Close</button>
+                    </div>
+                </div>
+            </div>
+        
+        </main>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/Assets/JS/script.js"></script>
+    <script src="/Assets/JS/toggle.js"></script>
+    <script src="/Assets/JS/Bhyakaran.js"></script>
+</body>
+
+</html>

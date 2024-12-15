@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Games | GyanJyoti</title>
+    <link rel="stylesheet" href="/Assets/Styles/game.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/Assets/Styles/Nav.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <section id="sidebar">
+        <ul class="side-menu">
+            <li><a href="#" class="active"><i class='bx bxs-dashboard icon'></i> Dashboard</a></li>
+            <li class="divider" data-text="main">Services</li>
+            <li><a href="/VideoCourse.html" target="_blank"><i class='bx bxs-inbox icon'></i> Courses</a></li>
+            <li><a href="/MainCourse.html" target="_blank"><i class='bx bxs-book icon'></i> Books</a></li>
+            <li><a href="/Education Game/Game.html" target="_blank"><i class='bx bx-game icon'></i> Educational
+                Game</a></li>
+            <li><a href="/Solar.html" target="_blank"><i class='bx bx-atom icon'></i>Science Hub</a></li>
+            <li><a href="/Quiz/Quiz.Html" target="_blank"><i class='bx bx-brain icon'></i>Quiz</a></li>
+            <li><a href="https://sajiloaiservice.vercel.app/"><i class='bx bx-chat icon'></i>Sajilo Ai</a></li>
+        </ul>
+    </section>
+    
+    <section id="content">
+        <div class="AllTopNav">
+            <nav class="top-nav">
+                <a href="index.html" class="brand">
+                    <img src="/Assets/IMG/gyan.png" alt="Gyan-Jyoti Official Logo" id="Gyan-Logo">
+                    <h1>GyanJyoti</h1>
+                </a>
+                <ul>
+                    <li><i class="bx bx-map"></i> Location: <span class="answer">Butwal-10, Rupandehi</span></li>
+                    <li><i class="bx bx-envelope"></i> Gmail: <span class="answer email">gyan@gmail.com</span></li>
+                    <li><i class="bx bx-book"></i> Total Books: <span class="answer books">31</span></li>
+                </ul>
+            </nav>
+            <nav>
+                <i class="bx bx-menu toggle-sidebar"></i>
+                <form action="#">
+                    <div class="form-group"></div>
+                </form>
+                <span class="divider"></span>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="social-icon" id="chatbot-icon"><i class="bx bx-chat"></i></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header09">
+            <h1><span class="blue">Science</span> <span class="purple">Hub</span></h1>
+        </div>
+
+        <div class="main">
+            <div class="card" data-game="Hangman">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="image.png" alt="HangMan">
+                        <h2>Periodic Table</h2>
+                    </div>
+                    <div class="card-back">
+                        <h3>Periodic Table</h3>
+                        <p>Explore the periodic table and test your knowledge of chemical elements in this fun, educational game!</p>
+                        <a href="HangMan/index.html" class="play-btn">See Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-game="Word Scramble">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="Solar-system.png" alt="Word Scramble">
+                        <h2>Solar system</h2>
+                    </div>
+                    <div class="card-back">
+                        <h3>3D Solar system</h3>
+                        <p>Discover the wonders of the solar system in a visually stunning 3D experience and solve interactive puzzles!</p>
+                        <a href="Word Scramble/index.html" class="play-btn">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!-- New Elements -->
+            <div class="card" data-game="Physics Simulator">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="physics.png" alt="Physics Simulator">
+                        <h2>Physics Simulator</h2>
+                    </div>
+                    <div class="card-back">
+                        <h3>Physics Simulator</h3>
+                        <p>Explore physics principles with fun simulations. Great for building a solid foundation in mechanics and motion.</p>
+                        <a href="PhysicsSimulator/index.html" class="play-btn">Explore Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-game="Chemistry Lab">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="chemistry.png" alt="Chemistry Lab">
+                        <h2>Chemistry Lab</h2>
+                    </div>
+                    <div class="card-back">
+                        <h3>Chemistry Lab</h3>
+                        <p>Mix chemicals virtually to learn about reactions and compounds. Perfect for aspiring chemists.</p>
+                        <a href="ChemistryLab/index.html" class="play-btn">Start Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="/Assets/JS/script.js"></script>
+    <script src="/Assets/JS/toggle.js"></script>
+    <script src="/Assets/JS/game.js"></script>
+</body>
+</html>
