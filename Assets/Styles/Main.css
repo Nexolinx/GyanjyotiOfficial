@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --subtext-color: #666666;
+    --nav-bg-color: #f9f9f9;
+    --icon-color: #333333;
+    --icon-hover-color: #007bff;
+    --avatar-border-color: #cccccc;
+    --divider-color: #e0e0e0;
+    --btn-gradient: linear-gradient(135deg,   #000000, #29789c, #5b8dee, #080cee );
+    --btn-hover-gradient:   linear-gradient(135deg,#333030, #28a4cf, #5B8DEE, #310101);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.NavForGyan {
+    background-color: var(--nav-bg-color);
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.NavContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.LogoSection {
+    display: flex;
+    align-items: center;
+   
+}
+
+.LogoImage {
+    width: 70px;
+    height: auto;
+}
+
+.LogoText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #3374ff, #000000, #5b8dee, #080cee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.NavLinks {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.SocialLink {
+    font-size: 1.2rem;
+    color: var(--icon-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.SocialLink:hover {
+    color: var(--icon-hover-color);
+    transform: scale(1.1);
+}
+
+.ModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ModeToggle:hover {
+    color: var(--icon-hover-color);
+    transform: scale(1.1);
+}
+
+.Avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--avatar-border-color);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.Avatar:hover {
+    border-color: var(--icon-hover-color);
+    transform: scale(1.1);
+}
+
+.Styled-HR {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: var(--divider-color);
+    margin-top: 1rem;
+}
+
+.AllBodyText {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.HeaderBody {
+    text-align: center;
+    max-width: 800px;
+}
+
+.MainHeaderText {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+#ActiveCode {
+    display: block;
+    background: linear-gradient(135deg, #0e0900, #5c4806, #5B8DEE, #000000);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.MainParaText {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--subtext-color);
+    line-height: 1.6;
+}
+
+.Button {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#BTNGET {
+    background: var(--btn-gradient);
+    color: white;
+    border: none;
+}
+
+#BTNGET:hover {
+    background: var(--btn-hover-gradient);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#BTNGET2 {
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+#BTNGET2:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--nav-bg-color);
+    color: var(--subtext-color);
+}
+
+@media (max-width: 768px) {
+    .NavContent {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .MainHeaderText {
+        font-size: 2.5rem;
+    }
+
+    .Button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}

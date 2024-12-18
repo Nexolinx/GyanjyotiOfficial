@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #6A1B9A;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --input-bg: #fff;
+    --button-hover: #357ABD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
+}
+
+.game-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 900px;
+}
+
+.how-to-play {
+    flex: 0 0 250px;
+    background-color: var(--input-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.how-to-play h3 {
+    color: var( --primary-color);
+    margin-bottom: 1rem;
+}
+
+
+.how-to-play li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var( --primary-color);
+}
+
+.container {
+    flex: 1;
+    background: var(--input-bg);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: var( --primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.word-display {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    color: var(--primary-color);
+    min-height: 3rem;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var( --primary-color);
+}
+
+.input-word {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var( --primary-color);
+}
+
+.settings {
+    margin-top: 1.5rem;
+}
+
+.toggle-settings {
+    width: 100%;
+    background-color: var( --primary-color);
+}
+
+.settings-panel {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.settings-panel.active {
+    display: block;
+}
+
+.difficulty, .theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+select, #theme-toggle {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--input-bg);
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+body.dark-theme {
+    --background-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --input-bg: #34495e;
+    --primary-color: #3498db;
+    --secondary-color: #9b59b6;
+    --button-hover: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .how-to-play {
+        flex: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .word-display {
+        font-size: 1.5rem;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
+

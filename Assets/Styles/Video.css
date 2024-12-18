@@ -1,0 +1,105 @@
+
+.CourseOp {
+    padding: 20px;
+  }
+  
+  .CourseOp h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #21242c;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .SearchItem {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  
+  .Search-Section {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #searchIcon {
+    position: absolute;
+    left: 10px;
+    color: #888;
+  }
+  
+  #Search {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+  }
+  
+  #clearIcon {
+    position: absolute;
+    right: 10px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .Course1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .video-box:hover {
+    box-shadow: 0 4px 8px rgba(12, 11, 11, 0.1);
+    background-color: #e6e4e4;
+  }
+  
+  .video-box a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .video-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .titleVideo {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .video-box:hover .play-icon {
+    opacity: 1;
+  }
+  
+  #noData {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+  }
+  
+  
